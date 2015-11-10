@@ -4,6 +4,9 @@ GOARCH=amd64
 TAG=${TAG:-latest}
 COMMIT=`git rev-parse --short HEAD`
 
+#测试
+IP=192.168.1.105
+
 all: build media
 
 clean:
@@ -29,5 +32,10 @@ release: build image
 
 test: clean 
 	@godep go test -v ./...
+
+run:
+	@cd controller \
+	&& godep go build -a -tags "netgo static_build" -installsuffix netgo \
+	&& ./controller --debug server --rethinkdb-addr=${IP}:28015 -d tcp://${IP}:2222
 
 .PHONY: all build clean media image test release
