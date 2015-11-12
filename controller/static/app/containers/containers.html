@@ -1,17 +1,17 @@
 <div id="destroy-modal" class="ui small modal transition">
 <i class="close icon"></i>
 <div class="header">
-    销毁容器（容器编码）: {{ vm.selectedContainerId | limitTo:12 }}
+    Destroy Container: {{ vm.selectedContainerId | limitTo:12 }}
 </div>
 <div class="content">
-    <p>你确认要销毁此容器?</p>
+    <p>Are you sure you want to destroy this container?</p>
 </div>
 <div class="actions">
     <div class="ui negative button">
-        不，取消
+        No
     </div>
     <div ng-click="vm.destroyContainer()" class="ui positive right labeled icon button">
-        是的，确认
+        Yes
         <i class="checkmark icon"></i>
     </div>
 </div>
@@ -20,17 +20,17 @@
 <div id="restart-modal" class="ui small modal transition">
     <i class="close icon"></i>
     <div class="header">
-        重启容器（容器编码）: {{ vm.selectedContainerId | limitTo:12 }}
+        Restart Container: {{ vm.selectedContainerId | limitTo:12 }}
     </div>
     <div class="content">
-        <p>你确认重启此容器?</p>
+        <p>Are you sure you want to restart this container?</p>
     </div>
     <div class="actions">
         <div class="ui negative button">
-            不，取消
+            No
         </div>
         <div ng-click="vm.restartContainer()" class="ui positive right labeled icon button">
-            是的，确认
+            Yes
             <i class="checkmark icon"></i>
         </div>
     </div>
@@ -39,17 +39,17 @@
 <div id="stop-modal" class="ui small stop modal transition">
     <i class="close icon"></i>
     <div class="header">
-        停止容器（容器编码）: {{ vm.selectedContainerId | limitTo:12 }}
+        Stop Container: {{ vm.selectedContainerId | limitTo:12 }}
     </div>
     <div class="content">
-        <p>你确认停止此容器?</p>
+        <p>Are you sure you want to stop this container?</p>
     </div>
     <div class="actions">
         <div class="ui negative button">
-            不，取消
+            No
         </div>
         <div ng-click="vm.stopContainer()" class="ui positive right labeled icon button">
-            是的，确认
+            Yes
             <i class="checkmark icon"></i>
         </div>
     </div>
@@ -58,17 +58,17 @@
 <div id="pause-modal" class="ui small modal transition">
     <i class="close icon"></i>
     <div class="header">
-        暂停容器（容器编码）: {{ vm.selectedContainerId | limitTo:12 }}
+        Pause Container: {{ vm.selectedContainerId | limitTo:12 }}
     </div>
     <div class="content">
-        <p>你确认暂停此容器?</p>
+        <p>Are you sure you want to Pause this container?</p>
     </div>
     <div class="actions">
         <div class="ui negative button">
-            不，取消
+            No
         </div>
         <div ng-click="vm.pauseContainer()" class="ui positive right labeled icon button">
-            是的，确认
+            Yes
             <i class="checkmark icon"></i>
         </div>
     </div>
@@ -77,13 +77,13 @@
 <div id="scale-modal" class="ui small modal transition">
     <i class="close icon"></i>
     <div class="header">
-        扩容/缩容: {{ vm.selectedContainerId | limitTo:12 }}
+        Scale Container: {{ vm.selectedContainerId | limitTo:12 }}
     </div>
     <div class="content">
         <div class="ui form">
             <div class="fields">
                 <div class="twelve wide field">
-                    <label>扩容/缩容实例数量</label>
+                    <label>Number of Instances</label>
                     <input class="input" ng-model="vm.numOfInstances" type="text">
                 </div>
             </div>
@@ -91,10 +91,10 @@
     </div>
     <div class="actions">
         <div class="ui negative button">
-            不，取消
+            Cancel
         </div>
         <div ng-click="vm.scaleContainer()" class="ui positive right labeled icon button">
-            是的，确认
+            Scale
             <i class="exchange icon"></i>
         </div>
     </div>
@@ -103,13 +103,13 @@
 <div id="rename-modal" class="ui small modal transition">
     <i class="close icon"></i>
     <div class="header">
-        重命名容器: {{ vm.selectedContainer.Names[0].split('/')[2] }}
+        Rename Container: {{ vm.containerName(vm.selectedContainer) }}
     </div>
     <div class="content">
         <div class="ui form">
             <div class="fields">
                 <div class="twelve wide field">
-                    <label>容器名称</label>
+                    <label>Name</label>
                     <input class="input" ng-model="vm.newName" type="text">
                 </div>
             </div>
@@ -117,10 +117,10 @@
     </div>
     <div class="actions">
         <div class="ui negative button">
-            不，取消
+            Cancel
         </div>
         <div ng-click="vm.renameContainer()" class="ui positive right labeled icon button">
-            是的，确认
+            Rename
             <i class="edit icon"></i>
         </div>
     </div>
@@ -130,10 +130,10 @@
     <div class="two column row">
         <div class="left floated column">
             <div ng-click="vm.refresh()" class="ui small blue labeled icon button">
-                <i class="refresh icon"></i> 刷新列表
+                <i class="refresh icon"></i> Refresh
             </div>
             <div ui-sref="dashboard.deploy" class="ui small green labeled icon button">
-                <i class="add icon"></i> 部署容器
+                <i class="add icon"></i> Deploy Container
             </div>
         </div>
 
@@ -147,7 +147,7 @@
     <div class="row" ng-show="vm.error">
         <div class="sixteen wide column">
             <div class="ui error message">
-                <div class="header">错误提示...</div>
+                <div class="header">Error...</div>
                 <p>{{vm.error}}</p>
             </div>
         </div>
@@ -156,7 +156,7 @@
     <div class="row" ng-show="vm.errors.length > 0">
         <div class="sixteen wide column">
             <div class="ui error message">
-                <div class="header">错误提示...</div>
+                <div class="header">Error...</div>
                 <p ng-repeat="e in vm.errors">{{e}}</p>
             </div>
         </div>
@@ -168,9 +168,9 @@
                 <i class="info icon"></i>
                 <div class="content">
                     <div class="header">
-                        容器信息
+                        Containers
                     </div>
-                    <p>没有连接到容器</p>
+                    <p>There are no containers.</p>
                 </div>
             </div>
         </div>
@@ -188,13 +188,13 @@
                             </div>
                         </th>
                         <th id="container-health-table-header" class="collapsing"><i class="heartbeat icon"></i></th>
-                        <th class="collapsing">容器ID</th>
-                        <th>主机节点</th>
-                        <th>容器名</th>
-                        <th>镜像</th>
-                        <th>状态</th>
-                        <th>创建时间</th>
-                        <th>操作</th>
+                        <th class="collapsing">Id</th>
+                        <th>Node</th>
+                        <th>Name</th>
+                        <th>Image</th>
+                        <th>Status</th>
+                        <th>Created</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -210,8 +210,8 @@
                             <span class="hidden">{{vm.containerStatusText(c)}}</span>
                         </td>
                         <td>{{c.Id | limitTo:12 }}</td>
-                        <td>{{c.Names[0].split('/')[1]}}</td>
-                        <td>{{c.Names[0].split('/')[2]}}</td>
+                        <td>{{vm.nodeName(c)}}</td>
+                        <td>{{vm.containerName(c)}}</td> 
                         <td>{{c.Image}}</td>
                         <td>{{c.Status}}</td>
                         <td>{{c.Created * 1000 | date:'yyyy-MM-dd HH:mm:ss Z'}}</td>
@@ -224,17 +224,17 @@
                                     <i class="wrench icon"></i>
                                 </div>
                                 <div class="menu">
-                                    <a ng-click="vm.showRestartContainerDialog(c)" class="item"><i class="green refresh icon"></i> 重启</a>
-                                    <a ng-click="vm.showStopContainerDialog(c)" class="item"><i class="black stop icon"></i> 停止</a>
-                                    <a ng-if="vm.containerStatusText(c) == 'Running'" ng-click="vm.showPauseContainerDialog(c)" class="item"><i class="black pause icon"></i> 暂停</a>
-                                    <a ng-if="vm.containerStatusText(c) == 'Paused'" ng-click="vm.unpauseContainer(c)" class="item"><i class="black play icon"></i> 取消暂停</a>
+                                    <a ng-click="vm.showRestartContainerDialog(c)" class="item"><i class="green refresh icon"></i> Restart</a>
+                                    <a ng-click="vm.showStopContainerDialog(c)" class="item"><i class="black stop icon"></i> Stop</a>
+                                    <a ng-if="vm.containerStatusText(c) == 'Running'" ng-click="vm.showPauseContainerDialog(c)" class="item"><i class="black pause icon"></i> Pause</a>
+                                    <a ng-if="vm.containerStatusText(c) == 'Paused'" ng-click="vm.unpauseContainer(c)" class="item"><i class="black play icon"></i> Unpause</a>
                                     
-                                    <a ng-click="vm.showDestroyContainerDialog(c)" class="item"><i class="red remove icon"></i> 销毁</a>
-                                    <a ng-click="vm.showScaleContainerDialog(c)" class="item"><i class="exchange icon"></i> 伸缩规模</a>
-                                    <a ng-click="vm.showRenameContainerDialog(c)" class="item"><i class="edit icon"></i> 修改名称</a>
-                                    <a ui-sref="dashboard.stats({id: c.Id})" class="item"><i class="bar chart icon"></i> 状态</a>
-                                    <a ui-sref="dashboard.exec({id: c.Id})" class="item"><i class="terminal outline icon"></i> 控制台</a>
-                                    <a ui-sref="dashboard.logs({id: c.Id})" class="item"><i class="text file outline icon"></i> 日志信息</a>
+                                    <a ng-click="vm.showDestroyContainerDialog(c)" class="item"><i class="red remove icon"></i> Destroy</a>
+                                    <a ng-click="vm.showScaleContainerDialog(c)" class="item"><i class="exchange icon"></i> Scale</a>
+                                    <a ng-click="vm.showRenameContainerDialog(c)" class="item"><i class="edit icon"></i> Rename</a>
+                                    <a ui-sref="dashboard.stats({id: c.Id})" class="item"><i class="bar chart icon"></i> Stats</a>
+                                    <a ui-sref="dashboard.exec({id: c.Id})" class="item"><i class="terminal outline icon"></i> Console</a>
+                                    <a ui-sref="dashboard.logs({id: c.Id})" class="item"><i class="text file outline icon"></i> Logs</a>
                                 </div>
                             </div>
                         </td>
@@ -250,9 +250,9 @@
                 <i class="info icon"></i>
                 <div class="content">
                     <div class="header">
-                        容器信息
+                        Containers
                     </div>
-                    <p>没有查询到容器</p>
+                    <p>No containers matched your filter query</p>
                 </div>
             </div>
         </div>
@@ -265,19 +265,19 @@
     </a>
     <a class="item" ng-click="vm.clearAll()">
         <i class="ban icon"></i>
-        清理
+        Clear 
     </a>
     <a class="item" ng-click="vm.restartAll()">
         <i class="refresh icon"></i>
-        重启
+        Restart 
     </a>
     <a class="item" ng-click="vm.stopAll()">
         <i class="stop icon"></i>
-        停止
+        Stop 
     </a>
     <a class="item" ng-click="vm.destroyAll()">
         <i class="delete icon"></i>
-        销毁
+        Destroy 
     </a>
 </div>
 
