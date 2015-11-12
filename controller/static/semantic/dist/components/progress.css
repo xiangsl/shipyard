@@ -35,49 +35,49 @@
 /* Indicating */
 .ui.indicating.progress .bar[style*="width: 1"],
 .ui.indicating.progress .bar[style*="width: 2"] {
-  background-color: #d95c5c;
+  background-color: #D95C5C;
 }
 .ui.indicating.progress .bar[style*="width: 3"] {
-  background-color: #d9a65c;
+  background-color: #D9A65C;
 }
 .ui.indicating.progress .bar[style*="width: 4"],
 .ui.indicating.progress .bar[style*="width: 5"] {
-  background-color: #e6bb48;
+  background-color: #E6BB48;
 }
 .ui.indicating.progress .bar[style*="width: 6"] {
-  background-color: #ddc928;
+  background-color: #DDC928;
 }
 .ui.indicating.progress .bar[style*="width: 7"],
 .ui.indicating.progress .bar[style*="width: 8"] {
-  background-color: #b4d95c;
+  background-color: #B4D95C;
 }
 .ui.indicating.progress .bar[style*="width: 9"],
 .ui.indicating.progress .bar[style*="width: 100"] {
-  background-color: #66da81;
+  background-color: #66DA81;
 }
 
 /* Indicating Label */
 .ui.indicating.progress[data-percent^="1"] .label,
 .ui.indicating.progress[data-percent^="2"] .label {
-  color: #d95c5c;
+  color: #D95C5C;
 }
 .ui.indicating.progress[data-percent^="3"] .label {
-  color: #d9a65c;
+  color: #D9A65C;
 }
 .ui.indicating.progress[data-percent^="4"] .label,
 .ui.indicating.progress[data-percent^="5"] .label {
-  color: #e6bb48;
+  color: #E6BB48;
 }
 .ui.indicating.progress[data-percent^="6"] .label {
-  color: #ddc928;
+  color: #DDC928;
 }
 .ui.indicating.progress[data-percent^="7"] .label,
 .ui.indicating.progress[data-percent^="8"] .label {
-  color: #b4d95c;
+  color: #B4D95C;
 }
 .ui.indicating.progress[data-percent^="9"] .label,
 .ui.indicating.progress[data-percent^="100"] .label {
-  color: #66da81;
+  color: #66DA81;
 }
 
 /* Single Digits */
@@ -90,7 +90,7 @@
 .ui.indicating.progress .bar[style^="width: 7%"],
 .ui.indicating.progress .bar[style^="width: 8%"],
 .ui.indicating.progress .bar[style^="width: 9%"] {
-  background-color: #d95c5c;
+  background-color: #D95C5C;
 }
 .ui.indicating.progress[data-percent="1"] .label,
 .ui.indicating.progress[data-percent="2"] .label,
@@ -101,12 +101,12 @@
 .ui.indicating.progress[data-percent="7"] .label,
 .ui.indicating.progress[data-percent="8"] .label,
 .ui.indicating.progress[data-percent="9"] .label {
-  color: #d95c5c;
+  color: #D95C5C;
 }
 
 /* Indicating Success */
 .ui.indicating.progress.success .label {
-  color: #356e36;
+  color: #356E36;
 }
 
 
@@ -174,7 +174,7 @@
 ---------------*/
 
 .ui.progress.success .bar {
-  background-color: #5bbd72 !important;
+  background-color: #5BBD72 !important;
 }
 .ui.progress.success .bar,
 .ui.progress.success .bar::after {
@@ -182,7 +182,7 @@
           animation: none !important;
 }
 .ui.progress.success > .label {
-  color: #356e36;
+  color: #356E36;
 }
 
 /*--------------
@@ -190,7 +190,7 @@
 ---------------*/
 
 .ui.progress.warning .bar {
-  background-color: #f2c037 !important;
+  background-color: #F2C037 !important;
 }
 .ui.progress.warning .bar,
 .ui.progress.warning .bar::after {
@@ -198,7 +198,7 @@
           animation: none !important;
 }
 .ui.progress.warning > .label {
-  color: #825c01;
+  color: #825C01;
 }
 
 /*--------------
@@ -206,7 +206,7 @@
 ---------------*/
 
 .ui.progress.error .bar {
-  background-color: #d95c5c !important;
+  background-color: #D95C5C !important;
 }
 .ui.progress.error .bar,
 .ui.progress.error .bar::after {
@@ -214,7 +214,7 @@
           animation: none !important;
 }
 .ui.progress.error > .label {
-  color: #912d2b;
+  color: #912D2B;
 }
 
 /*--------------
@@ -233,7 +233,7 @@
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background: #ffffff;
+  background: #FFFFFF;
   border-radius: 0.2857rem;
   -webkit-animation: progress-active 2s ease infinite;
           animation: progress-active 2s ease infinite;
@@ -290,19 +290,19 @@
   background: #888888;
 }
 .ui.inverted.progress .bar > .progress {
-  color: #fafafa;
+  color: #FAFAFA;
 }
 .ui.inverted.progress > .label {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .ui.inverted.progress.success > .label {
-  color: #5bbd72;
+  color: #5BBD72;
 }
 .ui.inverted.progress.warning > .label {
-  color: #f2c037;
+  color: #F2C037;
 }
 .ui.inverted.progress.error > .label {
-  color: #d95c5c;
+  color: #D95C5C;
 }
 
 /*--------------
@@ -359,58 +359,58 @@
 ---------------*/
 
 .ui.black.progress .bar {
-  background-color: #1b1c1d;
+  background-color: #1B1C1D;
 }
 .ui.blue.progress .bar {
-  background-color: #006e93;
+  background-color: #006E93;
 }
 .ui.green.progress .bar {
-  background-color: #5bbd72;
+  background-color: #5BBD72;
 }
 .ui.orange.progress .bar {
-  background-color: #e07b53;
+  background-color: #E07B53;
 }
 .ui.pink.progress .bar {
-  background-color: #d9499a;
+  background-color: #D9499A;
 }
 .ui.purple.progress .bar {
-  background-color: #564f8a;
+  background-color: #564F8A;
 }
 .ui.red.progress .bar {
-  background-color: #d95c5c;
+  background-color: #D95C5C;
 }
 .ui.teal.progress .bar {
-  background-color: #00b5ad;
+  background-color: #00B5AD;
 }
 .ui.yellow.progress .bar {
-  background-color: #f2c61f;
+  background-color: #F2C61F;
 }
 .ui.black.inverted.progress .bar {
   background-color: #333333;
 }
 .ui.blue.inverted.progress .bar {
-  background-color: #0097c9;
+  background-color: #0097C9;
 }
 .ui.green.inverted.progress .bar {
-  background-color: #2ecc40;
+  background-color: #2ECC40;
 }
 .ui.orange.inverted.progress .bar {
-  background-color: #ff851b;
+  background-color: #FF851B;
 }
 .ui.pink.inverted.progress .bar {
-  background-color: #ff8edf;
+  background-color: #FF8EDF;
 }
 .ui.purple.inverted.progress .bar {
-  background-color: #cdc6ff;
+  background-color: #CDC6FF;
 }
 .ui.red.inverted.progress .bar {
-  background-color: #ff695e;
+  background-color: #FF695E;
 }
 .ui.teal.inverted.progress .bar {
-  background-color: #6dffff;
+  background-color: #6DFFFF;
 }
 .ui.yellow.inverted.progress .bar {
-  background-color: #ffe21f;
+  background-color: #FFE21F;
 }
 
 /*--------------

@@ -33,9 +33,13 @@ release: build image
 test: clean 
 	@godep go test -v ./...
 
-run:
+testbuild:
 	@cd controller \
-	&& godep go build -a -tags "netgo static_build" -installsuffix netgo \
-	&& ./controller --debug server --rethinkdb-addr=${IP}:28015 -d tcp://${IP}:2222
+          	&& godep go build -a -tags "netgo static_build" -installsuffix netgo
+
+
+testrun:
+	@cd controller \
+	&& ./controller --debug server --rethinkdb-addr=${IP}:28015 -d tcp://${IP}:2375
 
 .PHONY: all build clean media image test release

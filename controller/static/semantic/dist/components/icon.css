@@ -193,34 +193,34 @@ i.bordered.inverted.icon {
 --------------------*/
 
 i.white.icon {
-  color: #ffffff !important;
+  color: #FFFFFF !important;
 }
 i.black.icon {
-  color: #1b1c1d !important;
+  color: #1B1C1D !important;
 }
 i.blue.icon {
-  color: #006e93 !important;
+  color: #006E93 !important;
 }
 i.green.icon {
-  color: #5bbd72 !important;
+  color: #5BBD72 !important;
 }
 i.orange.icon {
-  color: #e07b53 !important;
+  color: #E07B53 !important;
 }
 i.pink.icon {
-  color: #d9499a !important;
+  color: #D9499A !important;
 }
 i.purple.icon {
-  color: #564f8a !important;
+  color: #564F8A !important;
 }
 i.red.icon {
-  color: #d95c5c !important;
+  color: #D95C5C !important;
 }
 i.teal.icon {
-  color: #00b5ad !important;
+  color: #00B5AD !important;
 }
 i.yellow.icon {
-  color: #f2c61f !important;
+  color: #F2C61F !important;
 }
 
 /*-------------------
@@ -228,34 +228,34 @@ i.yellow.icon {
 --------------------*/
 
 i.inverted.icon {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 i.inverted.black.icon {
   color: #333333 !important;
 }
 i.inverted.blue.icon {
-  color: #0097c9 !important;
+  color: #0097C9 !important;
 }
 i.inverted.green.icon {
-  color: #2ecc40 !important;
+  color: #2ECC40 !important;
 }
 i.inverted.orange.icon {
-  color: #ff851b !important;
+  color: #FF851B !important;
 }
 i.inverted.pink.icon {
-  color: #ff8edf !important;
+  color: #FF8EDF !important;
 }
 i.inverted.purple.icon {
-  color: #cdc6ff !important;
+  color: #CDC6FF !important;
 }
 i.inverted.red.icon {
-  color: #ff695e !important;
+  color: #FF695E !important;
 }
 i.inverted.teal.icon {
-  color: #6dffff !important;
+  color: #6DFFFF !important;
 }
 i.inverted.yellow.icon {
-  color: #ffe21f !important;
+  color: #FFE21F !important;
 }
 
 /* Inverted Shapes */
@@ -266,47 +266,47 @@ i.inverted.circular.icon {
 }
 i.inverted.bordered.black.icon,
 i.inverted.circular.black.icon {
-  background-color: #1b1c1d !important;
+  background-color: #1B1C1D !important;
   color: #FFFFFF !important;
 }
 i.inverted.bordered.blue.icon,
 i.inverted.circular.blue.icon {
-  background-color: #006e93 !important;
+  background-color: #006E93 !important;
   color: #FFFFFF !important;
 }
 i.inverted.bordered.green.icon,
 i.inverted.circular.green.icon {
-  background-color: #5bbd72 !important;
+  background-color: #5BBD72 !important;
   color: #FFFFFF !important;
 }
 i.inverted.bordered.orange.icon,
 i.inverted.circular.orange.icon {
-  background-color: #e07b53 !important;
+  background-color: #E07B53 !important;
   color: #FFFFFF !important;
 }
 i.inverted.bordered.pink.icon,
 i.inverted.circular.pink.icon {
-  background-color: #d9499a !important;
+  background-color: #D9499A !important;
   color: #FFFFFF !important;
 }
 i.inverted.bordered.purple.icon,
 i.inverted.circular.purple.icon {
-  background-color: #564f8a !important;
+  background-color: #564F8A !important;
   color: #FFFFFF !important;
 }
 i.inverted.bordered.red.icon,
 i.inverted.circular.red.icon {
-  background-color: #d95c5c !important;
+  background-color: #D95C5C !important;
   color: #FFFFFF !important;
 }
 i.inverted.bordered.teal.icon,
 i.inverted.circular.teal.icon {
-  background-color: #00b5ad !important;
+  background-color: #00B5AD !important;
   color: #FFFFFF !important;
 }
 i.inverted.bordered.yellow.icon,
 i.inverted.circular.yellow.icon {
-  background-color: #f2c61f !important;
+  background-color: #F2C61F !important;
   color: #FFFFFF !important;
 }
 

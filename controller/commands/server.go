@@ -41,6 +41,7 @@ func CmdServer(c *cli.Context) {
 	tlsKey := c.String("tls-key")
 	allowInsecure := c.Bool("allow-insecure")
 
+
 	client, err := utils.GetClient(dockerUrl, tlsCaCert, tlsCert, tlsKey, allowInsecure)
 	if err != nil {
 		log.Fatal(err)

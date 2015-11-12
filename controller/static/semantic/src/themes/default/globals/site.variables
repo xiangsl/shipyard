@@ -10,7 +10,7 @@
 @pageFont          : 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 @fontSmoothing     : antialiased;
 
-@importGoogleFonts : true;
+@importGoogleFonts : false;
 @googleFontName    : 'Lato';
 @googleFontSizes   : '400,700,400italic,700italic';
 @googleSubset      : 'latin';

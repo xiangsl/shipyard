@@ -60,14 +60,14 @@
 
 /* Active Star */
 .ui.star.rating .active.icon {
-  color: #ffe623 !important;
-  text-shadow: 0px -1px 0px #cfa300, -1px 0px 0px #cfa300, 0px 1px 0px #cfa300, 1px 0px 0px #cfa300;
+  color: #FFE623 !important;
+  text-shadow: 0px -1px 0px #CFA300, -1px 0px 0px #CFA300, 0px 1px 0px #CFA300, 1px 0px 0px #CFA300;
 }
 
 /* Selected Star */
 .ui.star.rating .icon.selected,
 .ui.star.rating .icon.selected.active {
-  color: #ffb70a !important;
+  color: #FFB70A !important;
 }
 .ui.star.rating.partial {
   position: relative;
@@ -89,14 +89,14 @@
 
 /* Active Heart */
 .ui.heart.rating .active.icon {
-  color: #ff2733 !important;
-  text-shadow: 0px -1px 0px #9e0000, -1px 0px 0px #9e0000, 0px 1px 0px #9e0000, 1px 0px 0px #9e0000;
+  color: #FF2733 !important;
+  text-shadow: 0px -1px 0px #9E0000, -1px 0px 0px #9E0000, 0px 1px 0px #9E0000, 1px 0px 0px #9E0000;
 }
 
 /* Selected Heart */
 .ui.heart.rating .icon.selected,
 .ui.heart.rating .icon.selected.active {
-  color: #ff2733 !important;
+  color: #FF2733 !important;
 }
 
 

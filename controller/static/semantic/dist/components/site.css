@@ -1,6 +1,5 @@
-@import 'https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic&subset=latin';
 /*!
- * # Semantic UI - Site
+ * # Semantic UI x.x - Site
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -26,7 +25,7 @@ body {
   margin: 0px;
   padding: 0px;
   min-width: 320px;
-  background: #f7f7f7;
+  background: #F7F7F7;
   font-family: 'Roboto', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.33;
@@ -103,7 +102,7 @@ p:last-child {
 --------------------*/
 
 a {
-  color: #009fda;
+  color: #009FDA;
   text-decoration: none;
 }
 a:hover {
@@ -118,15 +117,15 @@ a:hover {
 
 /* Site */
 ::-webkit-selection {
-  background-color: #cce2ff;
+  background-color: #CCE2FF;
   color: rgba(0, 0, 0, 0.8);
 }
 ::-moz-selection {
-  background-color: #cce2ff;
+  background-color: #CCE2FF;
   color: rgba(0, 0, 0, 0.8);
 }
 ::selection {
-  background-color: #cce2ff;
+  background-color: #CCE2FF;
   color: rgba(0, 0, 0, 0.8);
 }
 

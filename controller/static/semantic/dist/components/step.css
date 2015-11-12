@@ -20,9 +20,9 @@
   vertical-align: middle;
   margin: 0em 0em;
   padding: 0.9285em 1.5em 0.9285em 2.25em;
-  background: #ffffff;
+  background: #FFFFFF;
   color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0px 0px 0px 1px #d4d4d5;
+  box-shadow: 0px 0px 0px 1px #D4D4D5;
   border-radius: 0em;
 }
 .ui.steps .step:after {
@@ -32,7 +32,7 @@
   top: 50%;
   right: 0em;
   border: medium none;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   width: 1.5em;
   height: 1.5em;
   border-bottom: 1px solid rgba(39, 41, 43, 0.15);
@@ -218,7 +218,7 @@
 .ui.steps .link.step:hover,
 .ui.steps a.step:hover::after,
 .ui.steps a.step:hover {
-  background: #fafafa;
+  background: #FAFAFA;
   color: rgba(0, 0, 0, 0.8);
 }
 
@@ -227,20 +227,20 @@
 .ui.steps .link.step:active,
 .ui.steps a.step:active::after,
 .ui.steps a.step:active {
-  background: #f0f0f0;
+  background: #F0F0F0;
   color: rgba(0, 0, 0, 0.8);
 }
 
 /* Active */
 .ui.steps .step.active {
   cursor: auto;
-  background: #f0f0f0;
+  background: #F0F0F0;
 }
 .ui.steps .step.active:after {
-  background: #f0f0f0;
+  background: #F0F0F0;
 }
 .ui.steps .step.active .title {
-  color: #009fda;
+  color: #009FDA;
 }
 .ui.ordered.steps .step.active:before,
 .ui.steps .active.step .icon {
@@ -253,20 +253,20 @@
 .ui.steps a.active.step:hover::after,
 .ui.steps a.active.step:hover {
   cursor: pointer;
-  background: #ececec;
+  background: #ECECEC;
   color: rgba(0, 0, 0, 0.8);
 }
 
 /* Completed */
 .ui.steps .step.completed > .icon:before,
 .ui.ordered.steps .step.completed:before {
-  color: #5bbd72;
+  color: #5BBD72;
 }
 
 /* Disabled */
 .ui.steps .disabled.step {
   cursor: auto;
-  background: #ffffff;
+  background: #FFFFFF;
   pointer-events: none;
 }
 .ui.steps .disabled.step,
@@ -275,7 +275,7 @@
   color: rgba(40, 40, 40, 0.3);
 }
 .ui.steps .disabled.step:after {
-  background: #ffffff;
+  background: #FFFFFF;
 }
 
 

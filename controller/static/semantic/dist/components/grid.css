@@ -1112,7 +1112,7 @@
   table-layout: fixed;
   width: 100%;
   margin: 1em 0em;
-  box-shadow: 0px 0px 0px 1px #d4d4d5;
+  box-shadow: 0px 0px 0px 1px #D4D4D5;
 }
 .ui.celled.grid > .row,
 .ui.celled.grid > .column.row,
@@ -1122,12 +1122,12 @@
   width: 100% !important;
   margin: 0em;
   padding: 0em;
-  box-shadow: 0px -1px 0px 0px #d4d4d5;
+  box-shadow: 0px -1px 0px 0px #D4D4D5;
 }
 .ui.celled.grid > .column:not(.row),
 .ui.celled.grid > .row > .column {
   display: table-cell;
-  box-shadow: -1px 0px 0px 0px #d4d4d5;
+  box-shadow: -1px 0px 0px 0px #D4D4D5;
 }
 .ui.celled.grid > .column:first-child,
 .ui.celled.grid > .row > .column:first-child {
@@ -1323,7 +1323,7 @@
 
 .ui.grid > .white.row,
 .ui.grid > .row > .white.column {
-  background-color: #ffffff !important;
+  background-color: #FFFFFF !important;
   color: rgba(0, 0, 0, 0.8);
 }
 .ui.grid > .row > .white.column {
@@ -1334,8 +1334,8 @@
 }
 .ui.grid > .black.row,
 .ui.grid > .row > .black.column {
-  background-color: #1b1c1d !important;
-  color: #ffffff;
+  background-color: #1B1C1D !important;
+  color: #FFFFFF;
 }
 .ui.grid > .row > .black.column {
   margin-top: -1rem;
@@ -1345,8 +1345,8 @@
 }
 .ui.grid > .blue.row,
 .ui.grid > .row > .blue.column {
-  background-color: #006e93 !important;
-  color: #ffffff;
+  background-color: #006E93 !important;
+  color: #FFFFFF;
 }
 .ui.grid > .row > .blue.column {
   margin-top: -1rem;
@@ -1356,8 +1356,8 @@
 }
 .ui.grid > .green.row,
 .ui.grid > .row > .green.column {
-  background-color: #5bbd72 !important;
-  color: #ffffff;
+  background-color: #5BBD72 !important;
+  color: #FFFFFF;
 }
 .ui.grid > .row > .green.column {
   margin-top: -1rem;
@@ -1367,8 +1367,8 @@
 }
 .ui.grid > .orange.row,
 .ui.grid > .row > .orange.column {
-  background-color: #e07b53 !important;
-  color: #ffffff;
+  background-color: #E07B53 !important;
+  color: #FFFFFF;
 }
 .ui.grid > .row > .orange.column {
   margin-top: -1rem;
@@ -1378,8 +1378,8 @@
 }
 .ui.grid > .pink.row,
 .ui.grid .pink.column {
-  background-color: #d9499a !important;
-  color: #ffffff;
+  background-color: #D9499A !important;
+  color: #FFFFFF;
 }
 .ui.grid > .row > .pink.column {
   margin-top: -1rem;
@@ -1389,8 +1389,8 @@
 }
 .ui.grid > .purple.row,
 .ui.grid > .row > .purple.column {
-  background-color: #564f8a !important;
-  color: #ffffff;
+  background-color: #564F8A !important;
+  color: #FFFFFF;
 }
 .ui.grid > .row > .purple.column {
   margin-top: -1rem;
@@ -1400,8 +1400,8 @@
 }
 .ui.grid > .red.row,
 .ui.grid > .row > .red.column {
-  background-color: #d95c5c !important;
-  color: #ffffff;
+  background-color: #D95C5C !important;
+  color: #FFFFFF;
 }
 .ui.grid > .row > .red.column {
   margin-top: -1rem;
@@ -1411,8 +1411,8 @@
 }
 .ui.grid > .teal.row,
 .ui.grid > .row > .teal.column {
-  background-color: #00b5ad !important;
-  color: #ffffff;
+  background-color: #00B5AD !important;
+  color: #FFFFFF;
 }
 .ui.grid > .row > .teal.column {
   margin-top: -1rem;
@@ -1422,8 +1422,8 @@
 }
 .ui.grid > .yellow.row,
 .ui.grid > .row > .yellow.column {
-  background-color: #f2c61f !important;
-  color: #ffffff;
+  background-color: #F2C61F !important;
+  color: #FFFFFF;
 }
 .ui.grid > .row > .yellow.column {
   margin-top: -1rem;
