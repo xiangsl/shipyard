@@ -29,10 +29,10 @@ func CmdServer(c *cli.Context) {
 	ldapAutocreateUsers := c.Bool("ldap-autocreate-users")
 	ldapDefaultAccessLevel := c.String("ldap-default-access-level")
 
-	log.Infof("shipyard version %s", version.Version)
+	log.Infof("shipyard 中文版本 %s", version.Version)
 
 	if len(authWhitelist) > 0 {
-		log.Infof("whitelisting the following subnets: %v", authWhitelist)
+		log.Infof("认证白名单: %v", authWhitelist)
 	}
 
 	dockerUrl := c.String("docker")
@@ -60,7 +60,7 @@ func CmdServer(c *cli.Context) {
 		log.Fatal(err)
 	}
 
-	log.Debugf("connected to docker: url=%s", dockerUrl)
+	log.Debugf("连接到Docker容器: url=%s", dockerUrl)
 
 	shipyardTlsCert := c.String("shipyard-tls-cert")
 	shipyardTlsKey := c.String("shipyard-tls-key")

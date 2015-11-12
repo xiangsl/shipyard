@@ -47,11 +47,11 @@ func (a *Api) addWebhookKey(w http.ResponseWriter, r *http.Request) {
 	}
 	key, err := a.manager.NewWebhookKey(k.Image)
 	if err != nil {
-		log.Errorf("error generating webhook key: %s", err)
+		log.Errorf("生成 webhook key错误: %s", err)
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	log.Infof("saved webhook key image=%s", key.Image)
+	log.Infof("保存 webhook key 镜像错误=%s", key.Image)
 	if err := json.NewEncoder(w).Encode(key); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
@@ -62,10 +62,10 @@ func (a *Api) deleteWebhookKey(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	id := vars["id"]
 	if err := a.manager.DeleteWebhookKey(id); err != nil {
-		log.Errorf("error deleting webhook key: %s", err)
+		log.Errorf("删除 webhook key 错误: %s", err)
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	log.Infof("removed webhook key id=%s", id)
+	log.Infof("删除 webhook key 编码=%s", id)
 	w.WriteHeader(http.StatusNoContent)
 }

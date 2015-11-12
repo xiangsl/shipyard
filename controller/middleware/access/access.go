@@ -15,7 +15,7 @@ var (
 )
 
 func defaultDeniedHandler(w http.ResponseWriter, r *http.Request) {
-	http.Error(w, "access denied", http.StatusForbidden)
+	http.Error(w, "拒绝访问", http.StatusForbidden)
 }
 
 type AccessRequired struct {
@@ -67,7 +67,7 @@ func (a *AccessRequired) handleRequest(w http.ResponseWriter, r *http.Request) e
 
 	if !valid {
 		a.deniedHandler.ServeHTTP(w, r)
-		return fmt.Errorf("access denied %s", r.RemoteAddr)
+		return fmt.Errorf("拒绝访问：远程地址 %s", r.RemoteAddr)
 	}
 
 	return nil

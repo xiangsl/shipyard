@@ -14,7 +14,7 @@ import (
 )
 
 var (
-	ErrNoUserInToken = errors.New("no user sent in token")
+	ErrNoUserInToken = errors.New("没有收到用户令牌")
 )
 
 type Auditor struct {
@@ -56,19 +56,19 @@ func (a *Auditor) HandlerFuncWithNext(w http.ResponseWriter, r *http.Request, ne
 
 	user, err := getAuthUsername(r)
 	if err != nil {
-		log.Errorf("audit error: %s", err)
+		log.Errorf("审计错误: %s", err)
 	}
 
 	path, err := filterURI(r.RequestURI)
 	if err != nil {
-		log.Errorf("audit path filter error: %s", err)
+		log.Errorf("审计路径过滤错误: %s", err)
 	}
 
 	// check if excluded
 	for _, e := range a.excludes {
 		match, err := regexp.MatchString(e, path)
 		if err != nil {
-			log.Errorf("audit exclude error: %s", err)
+			log.Errorf("审计排除错误: %s", err)
 		}
 
 		if match {
@@ -90,7 +90,7 @@ func (a *Auditor) HandlerFuncWithNext(w http.ResponseWriter, r *http.Request, ne
 		}
 
 		if err := a.manager.SaveEvent(evt); err != nil {
-			log.Errorf("error saving event: %s", err)
+			log.Errorf("保存事件错误: %s", err)
 		}
 	}
 

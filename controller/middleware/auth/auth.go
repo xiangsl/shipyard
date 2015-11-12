@@ -15,7 +15,7 @@ var (
 )
 
 func defaultDeniedHostHandler(w http.ResponseWriter, r *http.Request) {
-	http.Error(w, "unauthorized", http.StatusUnauthorized)
+	http.Error(w, "没有认证", http.StatusUnauthorized)
 }
 
 type AuthRequired struct {
@@ -36,7 +36,7 @@ func (a *AuthRequired) Handler(h http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		err := a.handleRequest(w, r)
 		if err != nil {
-			logger.Warnf("unauthorized request for %s from %s", r.URL.Path, r.RemoteAddr)
+			logger.Warnf("无效的认证请求 %s from %s", r.URL.Path, r.RemoteAddr)
 			return
 		}
 		h.ServeHTTP(w, r)
@@ -100,7 +100,7 @@ func (a *AuthRequired) handleRequest(w http.ResponseWriter, r *http.Request) err
 
 	if !valid {
 		a.deniedHostHandler.ServeHTTP(w, r)
-		return fmt.Errorf("unauthorized %s", r.RemoteAddr)
+		return fmt.Errorf("没有认证，远程地址： %s", r.RemoteAddr)
 	}
 
 	return nil
@@ -110,7 +110,7 @@ func (a *AuthRequired) HandlerFuncWithNext(w http.ResponseWriter, r *http.Reques
 	err := a.handleRequest(w, r)
 
 	if err != nil {
-		logger.Warnf("unauthorized request for %s from %s", r.URL.Path, r.RemoteAddr)
+		logger.Warnf("无效认证请求 %s from %s", r.URL.Path, r.RemoteAddr)
 		return
 	}
 

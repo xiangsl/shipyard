@@ -16,7 +16,7 @@ type (
 )
 
 func (h *EventHandler) Handle(e *dockerclient.Event) error {
-	log.Infof("event: date=%d status=%s container=%s", e.Time, e.Status, e.Id[:12])
+	log.Infof("日志事件: 日期=%d 状态=%s 容器=%s", e.Time, e.Status, e.Id[:12])
 	h.logDockerEvent(e)
 	return nil
 }

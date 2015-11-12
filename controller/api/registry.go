@@ -30,12 +30,12 @@ func (a *Api) addRegistry(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if err := a.manager.AddRegistry(registry); err != nil {
-		log.Errorf("error saving registry: %s", err)
+		log.Errorf("保存 registry 错误: %s", err)
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
-	log.Infof("added registry: name=%s", registry.Name)
+	log.Infof("增加 registry: name=%s", registry.Name)
 	w.WriteHeader(http.StatusNoContent)
 }
 
@@ -68,7 +68,7 @@ func (a *Api) removeRegistry(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if err := a.manager.RemoveRegistry(registry); err != nil {
-		log.Errorf("error deleting registry: %s", err)
+		log.Errorf("删除 registry 错误: %s", err)
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}

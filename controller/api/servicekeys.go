@@ -19,7 +19,7 @@ func (a *Api) addServiceKey(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	log.Infof("created service key key=%s description=%s", key.Key, key.Description)
+	log.Infof("创建 service key key=%s description=%s", key.Key, key.Description)
 	if err := json.NewEncoder(w).Encode(key); err != nil {
 		log.Error(err)
 	}
@@ -51,6 +51,6 @@ func (a *Api) removeServiceKey(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	log.Infof("removed service key %s", key.Key)
+	log.Infof("删除 service key %s", key.Key)
 	w.WriteHeader(http.StatusNoContent)
 }

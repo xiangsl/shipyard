@@ -19,14 +19,15 @@ func (a *Api) login(w http.ResponseWriter, r *http.Request) {
 
 	loginSuccessful, err := a.manager.Authenticate(creds.Username, creds.Password)
 	if err != nil {
-		log.Errorf("error during login for %s from %s: %s", creds.Username, r.RemoteAddr, err)
+		log.Errorf("登陆出错 %s from %s: %s", creds.Username, r.RemoteAddr, err)
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
 	if !loginSuccessful {
-		log.Warnf("invalid login for %s from %s", creds.Username, r.RemoteAddr)
-		http.Error(w, "invalid username/password", http.StatusForbidden)
+		log.Warnf("无效的登陆r %s from %s", creds.Username, r.RemoteAddr)
+		http.Error(w, "无效的用户名和密码", http.StatusForbidden)
+		//http.Error(w, "invalid username/password", http.StatusForbidden)
 		return
 	}
 
@@ -81,7 +82,8 @@ func (a *Api) changePassword(w http.ResponseWriter, r *http.Request) {
 	}
 	username := session.Values["username"].(string)
 	if username == "" {
-		http.Error(w, "unauthorized", http.StatusInternalServerError)
+		http.Error(w, "没有认证", http.StatusInternalServerError)
+		//http.Error(w, "unauthorized", http.StatusInternalServerError)
 		return
 	}
 	if err := a.manager.ChangePassword(username, creds.Password); err != nil {

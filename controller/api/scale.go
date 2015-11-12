@@ -16,7 +16,7 @@ func (a *Api) scaleContainer(w http.ResponseWriter, r *http.Request) {
 	n := r.URL.Query()["n"]
 
 	if len(n) == 0 {
-		http.Error(w, "you must enter a number of instances (param: n)", http.StatusBadRequest)
+		http.Error(w, "你必须输入一个数字 (param: n)", http.StatusBadRequest)
 		return
 	}
 
@@ -27,7 +27,7 @@ func (a *Api) scaleContainer(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if numInstances <= 0 {
-		http.Error(w, "you must enter a positive value", http.StatusBadRequest)
+		http.Error(w, "你必须输入一个有效的值", http.StatusBadRequest)
 		return
 	}
 

@@ -139,7 +139,7 @@
 
         <div class="right aligned right floated column">
             <div class="ui small icon input">
-                <input ng-model="tableFilter" placeholder="Search containers..." reset-field/>
+                <input ng-model="tableFilter" placeholder="检索容器..." reset-field/>
             </div>
         </div>
     </div>
@@ -224,17 +224,17 @@
                                     <i class="wrench icon"></i>
                                 </div>
                                 <div class="menu">
-                                    <a ng-click="vm.showRestartContainerDialog(c)" class="item"><i class="green refresh icon"></i> Restart</a>
-                                    <a ng-click="vm.showStopContainerDialog(c)" class="item"><i class="black stop icon"></i> Stop</a>
-                                    <a ng-if="vm.containerStatusText(c) == 'Running'" ng-click="vm.showPauseContainerDialog(c)" class="item"><i class="black pause icon"></i> Pause</a>
-                                    <a ng-if="vm.containerStatusText(c) == 'Paused'" ng-click="vm.unpauseContainer(c)" class="item"><i class="black play icon"></i> Unpause</a>
+                                    <a ng-click="vm.showRestartContainerDialog(c)" class="item"><i class="green refresh icon"></i> 启动容器</a>
+                                    <a ng-click="vm.showStopContainerDialog(c)" class="item"><i class="black stop icon"></i> 停止容器</a>
+                                    <a ng-if="vm.containerStatusText(c) == 'Running'" ng-click="vm.showPauseContainerDialog(c)" class="item"><i class="black pause icon"></i> 暂停容器</a>
+                                    <a ng-if="vm.containerStatusText(c) == 'Paused'" ng-click="vm.unpauseContainer(c)" class="item"><i class="black play icon"></i> 恢复容器</a>
                                     
-                                    <a ng-click="vm.showDestroyContainerDialog(c)" class="item"><i class="red remove icon"></i> Destroy</a>
-                                    <a ng-click="vm.showScaleContainerDialog(c)" class="item"><i class="exchange icon"></i> Scale</a>
-                                    <a ng-click="vm.showRenameContainerDialog(c)" class="item"><i class="edit icon"></i> Rename</a>
-                                    <a ui-sref="dashboard.stats({id: c.Id})" class="item"><i class="bar chart icon"></i> Stats</a>
-                                    <a ui-sref="dashboard.exec({id: c.Id})" class="item"><i class="terminal outline icon"></i> Console</a>
-                                    <a ui-sref="dashboard.logs({id: c.Id})" class="item"><i class="text file outline icon"></i> Logs</a>
+                                    <a ng-click="vm.showDestroyContainerDialog(c)" class="item"><i class="red remove icon"></i> 销毁容器</a>
+                                    <a ng-click="vm.showScaleContainerDialog(c)" class="item"><i class="exchange icon"></i> 扩容/缩容</a>
+                                    <a ng-click="vm.showRenameContainerDialog(c)" class="item"><i class="edit icon"></i> 容器重命名</a>
+                                    <a ui-sref="dashboard.stats({id: c.Id})" class="item"><i class="bar chart icon"></i> 容器状态</a>
+                                    <a ui-sref="dashboard.exec({id: c.Id})" class="item"><i class="terminal outline icon"></i> 控制台</a>
+                                    <a ui-sref="dashboard.logs({id: c.Id})" class="item"><i class="text file outline icon"></i>日志</a>
                                 </div>
                             </div>
                         </td>

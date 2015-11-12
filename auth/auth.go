@@ -9,8 +9,8 @@ import (
 )
 
 var (
-	ErrUnauthorized  = errors.New("unauthorized")
-	ErrNoUserInToken = errors.New("no user sent in token")
+	ErrUnauthorized  = errors.New("无效的认证")
+	ErrNoUserInToken = errors.New("没有用户发送令牌")
 )
 
 type (
