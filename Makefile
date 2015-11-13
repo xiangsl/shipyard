@@ -29,7 +29,7 @@ image: media build
 	@cd controller && docker build -t dockerclub/shipyard:$(TAG) .
 
 release: build image
-	@docker push shipyard/dockerclub:$(TAG)
+	@docker push dockerclub/shipyard:$(TAG)
 
 test: clean 
 	@godep go test -v ./...
