@@ -5,7 +5,7 @@ TAG=${TAG:-latest}
 COMMIT=`git rev-parse --short HEAD`
 
 #测试
-IP=192.168.59.103
+IP=127.0.0.1
 
 all: build media
 
