@@ -37,6 +37,7 @@ const (
 )
 
 var (
+	ErrLoginFailure               = errors.New("无效的用户名和密码")
 	ErrAccountExists              = errors.New("账户已存在")
 	ErrAccountDoesNotExist        = errors.New("账户不存在")
 	ErrRoleDoesNotExist           = errors.New("角色不存在")
@@ -479,13 +480,19 @@ func (m DefaultManager) Authenticate(username, password string) (bool, error) {
 		acct, err := m.Account(username)
 		if err != nil {
 			log.Error(err)
-			return false, err
+			return false, ErrLoginFailure
 		}
 
 		passwordHash = acct.Password
 	}
 
-	return m.authenticator.Authenticate(username, password, passwordHash)
+	a, err := m.authenticator.Authenticate(username, password, passwordHash)
+		if !a || err != nil {
+			log.Error(ErrLoginFailure)
+			return false, ErrLoginFailure
+		}
+
+	return true, nil
 }
 
 func (m DefaultManager) NewAuthToken(username string, userAgent string) (*auth.AuthToken, error) {
