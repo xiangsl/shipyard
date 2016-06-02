@@ -1,6 +1,7 @@
 {
 	"ImportPath": "github.com/shipyard/shipyard",
 	"GoVersion": "go1.5",
+	"GodepVersion": "v73",
 	"Packages": [
 		"./..."
 	],
@@ -24,11 +25,6 @@
 			"ImportPath": "github.com/codegangsta/negroni",
 			"Comment": "v0.1-70-gc7477ad",
 			"Rev": "c7477ad8e330bef55bf1ebe300cf8aa67c492d1b"
-		},
-		{
-			"ImportPath": "github.com/dancannon/gorethink",
-			"Comment": "v2.0.2",
-			"Rev": "3742792da4bc279ccd6d807f24687009cbeda860"
 		},
 		{
 			"ImportPath": "github.com/davecgh/go-spew/spew",
@@ -115,6 +111,11 @@
 			"ImportPath": "gopkg.in/asn1-ber.v1",
 			"Comment": "v1.1",
 			"Rev": "4e86f4367175e39f69d9358a5f17b4dda270378d"
+		},
+		{
+			"ImportPath": "gopkg.in/dancannon/gorethink.v2",
+			"Comment": "v2.0.2",
+			"Rev": "3742792da4bc279ccd6d807f24687009cbeda860"
 		},
 		{
 			"ImportPath": "gopkg.in/dancannon/gorethink.v2/encoding",
