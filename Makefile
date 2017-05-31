@@ -26,7 +26,7 @@ media:
 
 image: media build
 	@echo Building Shipyard image $(TAG)
-	@cd controller && docker build -t dockerclub/shipyard:$(TAG) .
+	@cd controller && docker build -t xiangsl/shipyard:$(TAG) .
 
 release: build image
 	@docker push dockerclub/shipyard:$(TAG)
