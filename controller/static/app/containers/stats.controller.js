@@ -169,7 +169,7 @@
         });
 
         var stream = oboe({
-            url: '/containers/' + vm.id + '/stats',
+            url: 'containers/' + vm.id + '/stats',
             withCredentials: true,
             headers: {
                 'X-Access-Token': localStorage.getItem("X-Access-Token")
