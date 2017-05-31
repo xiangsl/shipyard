@@ -1,7 +1,7 @@
 # Shipyard中文版本
 Composable Docker Management 
 
-[![Build Status](https://travis-ci.org/dockerclubgroup/shipyard.svg?branch=master)](https://travis-ci.org/dockerclubgroup/shipyard)
+[![Build Status](https://travis-ci.org/xiangsl/shipyard.svg?branch=master)](https://travis-ci.org/xiangsl/shipyard)
 Shipyard enables multi-host, Docker cluster management.  It uses [Docker Swarm](https://docs.docker.com/swarm) for cluster resourcing and scheduling.
 
 # Quick Start
