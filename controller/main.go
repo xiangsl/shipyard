@@ -5,8 +5,8 @@ import (
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/codegangsta/cli"
-	"github.com/shipyard/shipyard/controller/commands"
-	"github.com/shipyard/shipyard/version"
+	"github.com/xiangsl/shipyard/controller/commands"
+	"github.com/xiangsl/shipyard/version"
 )
 
 const (
@@ -40,7 +40,7 @@ func main() {
 				cli.StringFlag{
 					Name:  "rethinkdb-addr",
 					Usage: "RethinkDB address",
-					Value: "rethinkdb:28015",
+					Value: "139.224.226.95:28015",
 				},
 				cli.StringFlag{
 					Name:  "rethinkdb-auth-key",
@@ -58,7 +58,7 @@ func main() {
 				},
 				cli.StringFlag{
 					Name:   "docker, d",
-					Value:  "tcp://127.0.0.1:2375",
+					Value:  "tcp://139.224.226.95:2375",
 					Usage:  "docker swarm addr",
 					EnvVar: "DOCKER_HOST",
 				},

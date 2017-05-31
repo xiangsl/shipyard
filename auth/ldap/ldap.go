@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/shipyard/shipyard/auth"
+	"github.com/xiangsl/shipyard/auth"
 	goldap "gopkg.in/ldap.v1"
 )
 

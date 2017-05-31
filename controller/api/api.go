@@ -10,12 +10,12 @@ import (
 	"github.com/gorilla/context"
 	"github.com/gorilla/mux"
 	"github.com/mailgun/oxy/forward"
-	"github.com/shipyard/shipyard/auth"
-	"github.com/shipyard/shipyard/controller/manager"
-	"github.com/shipyard/shipyard/controller/middleware/access"
-	"github.com/shipyard/shipyard/controller/middleware/audit"
-	mAuth "github.com/shipyard/shipyard/controller/middleware/auth"
-	"github.com/shipyard/shipyard/tlsutils"
+	"github.com/xiangsl/shipyard/auth"
+	"github.com/xiangsl/shipyard/controller/manager"
+	"github.com/xiangsl/shipyard/controller/middleware/access"
+	"github.com/xiangsl/shipyard/controller/middleware/audit"
+	mAuth "github.com/xiangsl/shipyard/controller/middleware/auth"
+	"github.com/xiangsl/shipyard/tlsutils"
 	"golang.org/x/net/websocket"
 )
 
@@ -145,7 +145,7 @@ func (a *Api) Run() error {
 	apiRouter.HandleFunc("/api/consolesession/{token}", a.removeConsoleSession).Methods("DELETE")
 
 	// global handler
-	globalMux.Handle("/", http.FileServer(http.Dir("static")))
+	globalMux.Handle("/", http.FileServer(http.Dir("C:/Users/Administrator/Desktop/gopath/src/github.com/xiangsl/shipyard/controller/static")))
 
 	auditExcludes := []string{
 		"^/containers/json",

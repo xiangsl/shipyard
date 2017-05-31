@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/shipyard/shipyard"
+	"github.com/xiangsl/shipyard"
 	"github.com/stretchr/testify/assert"
 )
 

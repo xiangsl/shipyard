@@ -3,12 +3,12 @@ package commands
 import (
 	log "github.com/Sirupsen/logrus"
 	"github.com/codegangsta/cli"
-	"github.com/shipyard/shipyard/auth/builtin"
-	"github.com/shipyard/shipyard/auth/ldap"
-	"github.com/shipyard/shipyard/controller/api"
-	"github.com/shipyard/shipyard/controller/manager"
-	"github.com/shipyard/shipyard/utils"
-	"github.com/shipyard/shipyard/version"
+	"github.com/xiangsl/shipyard/auth/builtin"
+	"github.com/xiangsl/shipyard/auth/ldap"
+	"github.com/xiangsl/shipyard/controller/api"
+	"github.com/xiangsl/shipyard/controller/manager"
+	"github.com/xiangsl/shipyard/utils"
+	"github.com/xiangsl/shipyard/version"
 )
 
 var (
@@ -40,7 +40,6 @@ func CmdServer(c *cli.Context) {
 	tlsCert := c.String("tls-cert")
 	tlsKey := c.String("tls-key")
 	allowInsecure := c.Bool("allow-insecure")
-
 
 	client, err := utils.GetClient(dockerUrl, tlsCaCert, tlsCert, tlsKey, allowInsecure)
 	if err != nil {

@@ -5,8 +5,8 @@ import (
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/samalba/dockerclient"
-	"github.com/shipyard/shipyard"
-	"github.com/shipyard/shipyard/utils"
+	"github.com/xiangsl/shipyard"
+	"github.com/xiangsl/shipyard/utils"
 )
 
 type (

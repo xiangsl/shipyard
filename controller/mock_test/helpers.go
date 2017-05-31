@@ -4,10 +4,10 @@ import (
 	"time"
 
 	"github.com/samalba/dockerclient"
-	"github.com/shipyard/shipyard"
-	"github.com/shipyard/shipyard/auth"
-	"github.com/shipyard/shipyard/dockerhub"
-	registry "github.com/shipyard/shipyard/registry/v1"
+	"github.com/xiangsl/shipyard"
+	"github.com/xiangsl/shipyard/auth"
+	"github.com/xiangsl/shipyard/dockerhub"
+	registry "github.com/xiangsl/shipyard/registry/v1"
 )
 
 var (
