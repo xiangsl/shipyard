@@ -145,6 +145,8 @@ func (a *Api) Run() error {
 	apiRouter.HandleFunc("/api/consolesession/{token}", a.removeConsoleSession).Methods("DELETE")
 
 	// global handler
+	//设置实际路径，不知道为啥，在webstorm中老是找不到界面，发布到容器时去掉
+	//globalMux.Handle("/", http.FileServer(http.Dir("C:/Users/Administrator/Desktop/gopath/src/github.com/xiangsl/shipyard/controller/static")))
 	globalMux.Handle("/", http.FileServer(http.Dir("static")))
 
 	auditExcludes := []string{

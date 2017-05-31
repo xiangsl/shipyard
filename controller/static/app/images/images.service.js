@@ -10,7 +10,7 @@
             return {
                 list: function() {
                     var promise = $http
-                        .get(base_url+'/images/json')
+                        .get('images/json')
                         .then(function(response) {
                             return response.data;
                         });
@@ -18,7 +18,7 @@
                 },
                 remove: function(image) {
                     var promise = $http
-                        .delete(base_url+'/images/' + image.Id + '?force=1')
+                        .delete('images/' + image.Id + '?force=1')
                         .then(function(response) {
                             return response.data;
                         });
