@@ -5,4 +5,5 @@
 		]);
 		
 })();
+var base_url="/docker";
 

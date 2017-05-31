@@ -37,7 +37,7 @@
                     .get('api/consolesession/' + vm.id)
                     .success(function(data, status, headers, config) {
                         vm.token = data.token;
-                        vm.addr = wsScheme + "://" + window.location.hostname + ":" + window.location.port + "/exec?id=" + vm.id + "&cmd=" + cmd + "&h=" + termHeight + "&w=" + termWidth + "&token=" + vm.token;
+                        vm.addr = wsScheme + "://" + window.location.hostname + ":" + window.location.port + base_url+"/exec?id=" + vm.id + "&cmd=" + cmd + "&h=" + termHeight + "&w=" + termWidth + "&token=" + vm.token;
 
                         if (term != null) {
                             term.destroy();
