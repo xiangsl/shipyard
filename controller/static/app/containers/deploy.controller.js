@@ -265,7 +265,7 @@
             transformDns();
 
             $http
-                .post('/containers/create?name='+vm.containerName, vm.request)
+                .post(base_url+'/containers/create?name='+vm.containerName, vm.request)
                 .success(function(data, status, headers, config) {
                     if(status >= 400) {
                         vm.error = data;
@@ -273,7 +273,7 @@
                         return;
                     }
                     $http
-                        .post('/containers/'+ data.Id +'/start')
+                        .post(base_url+'/containers/'+ data.Id +'/start')
                         .success(function(data, status, headers, config) {
                             $state.transitionTo('dashboard.containers');
                         })
