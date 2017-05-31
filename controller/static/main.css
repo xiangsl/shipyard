@@ -12,30 +12,30 @@
 
 @media (min-width: 931px) {
     #content {
-        margin-top: 3rem;
+        /*margin-top: 3rem;tydic云管理平台修改*/
     }
 }
 
 @media (max-width: 930px) {
     #content {
-        margin-top: 5.5rem;
+        /*margin-top: 5.5rem;tydic云管理平台修改*/
     }
 }
 
 @media (max-width: 480px) {
     #content {
-        margin-top: 8rem;
+        /*margin-top: 8rem;tydic云管理平台修改*/
     }
 }
 
 @media (max-width: 350px) {
     #content {
-        margin-top: 10.5rem;
+        /*margin-top: 10.5rem;tydic云管理平台修改*/
     }
 }
 
 .ui.small.model.transition {
-    margin-top: -98px;
+    /*margin-top: -98px;tydic云管理平台修改*/
 }
 
 .ui.fixed.inverted.main.menu {
